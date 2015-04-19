@@ -34,11 +34,11 @@ class Card:
 		self.card4 = card4
 
 	def winner(self):
-		cards = [self.card2,self.card3,self.card4]
-		win = 0
+		cards = [self.card1,self.card2,self.card3,self.card4]
+		win = self.card1
 		for i in cards:
 			if suit(i) == suit(self.card1):
-				if value(i) > value(self.card1):
+				if value(i) > value(win)
 					win = cards.index(i) + 1
 
 		return win 
