@@ -1,3 +1,4 @@
+'''
 def suit(card):	
 		check_suit = card/13
 		if check_suit == 0:
@@ -24,6 +25,7 @@ def value(card):
 
 def name_of_card(card):
 		return value(card) + " if " + suit(card)
+'''
 
 
 class Card:
@@ -34,11 +36,12 @@ class Card:
 		self.card4 = card4
 
 	def winner(self):
-		cards = [self.card1,self.card2,self.card3,self.card4]
-		win = self.card1
+		cards = [self.card2,self.card3,self.card4]
+		winner = self.card1
+		win = 0
 		for i in cards:
 			if suit(i) == suit(self.card1):
-				if value(i) > value(win)
+				if i%13 > winner%13:
 					win = cards.index(i) + 1
 
 		return win 
